@@ -70,6 +70,7 @@ def write(bboxes, img, classes, colors):
     feedback = ("{}".format(labels["Current Object"])+ " " +"is"+" at {} ".format(round(distance))+"Inches")
     # # speak.Speak(feedback)     # If you are running this on linux based OS kindly use espeak. Using this speaking library in winodws will add unnecessary latency 
     print(feedback)
+    print(distance)
     
     cv2.putText(img, str("{:.2f} Inches".format(distance)), (text_w+x,y), cv2.FONT_HERSHEY_DUPLEX, font_scale, (0,255,0), font_thickness, cv2.LINE_AA)
     cv2.rectangle(img, (bboxes[0],bboxes[1]),(bboxes[2] + text_w -30,bboxes[3]), color, 2)
