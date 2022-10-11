@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route("/")
 def main():
     return render_template("index.html")
-
+def photo(render):
+    return render_template("straight.html")
 def gen(camera):
     while True:
         frame = camera.main()
